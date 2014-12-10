@@ -1,0 +1,13 @@
+body {
+  /*min-height: 2000px;*/
+  padding-top: 70px; /* used with fixed top */
+}
+
+.navbar-static-top {
+  margin-bottom: 19px;
+}
+
+.starter-template {
+  padding: 40px 15px;
+  text-align: center;
+}
