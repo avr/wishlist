@@ -103,7 +103,7 @@ class ItemController extends \BaseController {
 	 *
 	 * @return Response
 	 */
-	public function store()
+	public function store($list_id)
 	{
 
 		$data = Input::all();
@@ -118,7 +118,7 @@ class ItemController extends \BaseController {
     // If item is created, show the listing page with a success message
     if ($item = Item::create($data)) {
       
-      return Redirect::route('lists.items.index', $item->list_id)->withSuccess('The Item was successfully created');
+      return Redirect::route('lists.items.index', [$list_id])->withSuccess('The Item was successfully created');
     
     }
 

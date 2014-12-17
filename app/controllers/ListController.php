@@ -18,6 +18,10 @@ class ListController extends \BaseController {
 
     $lists = WishList::all();
 
+    if ( Request::ajax() ) {
+      return $lists;
+    }
+
 		return View::make('lists.index', compact('lists'));
 	}
 

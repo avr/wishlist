@@ -10,6 +10,7 @@ class Item extends Eloquent {
 	protected $table = 'items';
 
   protected $fillable = [
+    'list_id',
     'name',
     'image_url',
     'item_url',

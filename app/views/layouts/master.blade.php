@@ -39,6 +39,8 @@
           <ul class="nav navbar-nav">
             <li>{{ HTML::linkRoute('home', 'Home') }}</li>
             <li>{{ HTML::linkRoute('lists.index', 'Wish Lists') }}</li>
+            <li>{{ HTML::linkRoute('signup', 'Sign Up') }}</li>
+
           </ul>
         </div><!--/.nav-collapse -->
       </div>

@@ -8,7 +8,7 @@
   <div class="row">
     {{ Former::populate($item) }}
     @if ($mode === 'create')
-      {{ Former::open()->route('lists.items.store') }}
+      {{ Former::open()->route('lists.items.store', [$list_id]) }}
     @else
       {{ Former::open()->method('PUT')->route('lists.items.update', [$list_id, $item->id]) }}
     @endif

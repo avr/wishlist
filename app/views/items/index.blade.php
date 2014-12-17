@@ -2,13 +2,14 @@
 
 @section('content')
 
-  <h2>{{ $items->last()->wishlist->list_name }}</h2>
+  <h2>{{ $wishlist->list_name }}</h2>
+  {{ HTML::linkRoute('lists.items.create', 'Add Item', [$wishlist->id], ['class' => 'btn btn-primary btn-sm']) }}
+
 
 <div class="table-responsive">
       <table class="table table-bordered">
         <thead>
           <tr>
-            <th>#</th>
             <th>Item Name</th>
             <th>Actions</th>
           </tr>
@@ -18,12 +19,12 @@
         @foreach ($items as $item)
 
           <tr>
-            <td>{{ $item->id }}</td>
             <td>{{ $item->name }}</td>
             <td>{{ HTML::linkRoute('lists.items.edit', 'Edit', [$item->wishlist->id, $item->id], ['class' => 'btn btn-primary btn-sm']) }}</td>
           </tr>
 
         @endforeach
+        
         </tbody>
 
       </table>

@@ -5,7 +5,7 @@
 {{ HTML::linkRoute('lists.create', 'Add new List', null, ['class' => 'btn btn-primary btn-sm']) }}
 
 <div class="table-responsive">
-      <table class="table table-bordered">
+      <table class="table table-bordered table-small">
         <thead>
           <tr>
             <th>#</th>
@@ -16,7 +16,6 @@
         <tbody>
 
         @foreach ($lists as $list)
-
           <tr>
             <td>{{ $list->id }}</td>
             <td>{{ $list->list_name }}</td>

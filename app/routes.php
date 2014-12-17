@@ -24,3 +24,5 @@ Route::get('/', ['as' => 'home', 'uses' => 'HomeController@showWelcome']);
 
 Route::resource('lists', 'ListController');
 Route::resource('lists.items', 'ItemController');
+
+Route::get('/create-account', ['as' => 'signup', 'SignupController@index']);
